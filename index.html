@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国人口概况</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/grid.description.css" />
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script src="./libs/d3.js"></script>
+    <script src="./js/china.js"></script>
+    <script type="module">
+        import './js/map.js'
+        import './js/ethnic.js'
+        import './js/jiaoyu.js'
+    </script>
+</head>
+<body>
+    <!-- 第一行，标题 -->
+    <div class="text1"  style="height:7vh;width: 100%;">
+    <h1>中国第七次人口普查概况</h1>
+    <div class="showTime">
+        <script>
+          var t = null;
+          t = setTimeout(time, 1000); //开始运行
+          function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+              "当前时间：" +
+              y +
+              "年" +
+              mt +
+              "月" +
+              day +
+              "日" +
+              h +
+              "时" +
+              m +
+              "分" +
+              s +
+              "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环
+          }
+        </script>
+        </div>
+    </div>
+    <!-- 主内容区域，可滚动 -->
+    <div class="main-content">
+      <!-- 第二行 -->
+      <div class="container1">
+          <!-- 第二行，第一个图 -->
+          <div id="ethnic"  style="height:65vh;width: 18%;"></div>
+          <!-- 第二行，第二个图 -->
+          <div class="div2"  style="height:65vh;width: 38%;">
+              <div class="text2" style="height:10vh;width:100%;">
+                <div style="height:50%">
+                <li id="chinese1" style="float:right">男性人口数</li>
+                <li id="chinese2" style="float:left">女性人口数</li>
+              </div>
+              <div stytle="height:50%">
+                <li id="math1" style="float:left;">723339956</li>
+                <li id="math2" style="float:right">688438768</li>
+              </div>
+              </div> 
+              <!-- 中国地图 -->
+              <div id="map" style="height:50vh;width:100%;"></div>  
+          </div>
+          <!-- 第二行第三个图 -->
+          <div  id="population" style="height:65vh;width: 44%;"></div>
+      </div>
+      <!-- 第三行 -->
+      <div style="height:50vh;width:100%;display: flex;">
+        <!-- 第三行第一个图 -->
+        <div id="jiaoyu" style="width:50%;height:50vh">
+       
+        </div>
+       <!-- 第三行第二个图 -->
+        <div id="city"  style="width:50%;height:50vh">
+        </div>
+
+      </div>
+      <!-- 第四行 -->
+      <div style="height: 50vh;width:100%;display: flex;">
+        <!-- 第四行第一个图 -->
+      <div id="education" style="height:40vh;width:70%;">
+      </div>
+      <!-- 第四行第二个图 -->
+      <div id="age" style="height:40vh;width:30%;">
+      </div>
+    </div>
+    </div> <!-- 结束 main-content -->
+
+    <script src="./js/population.js"></script> 
+    <script src="./js/city.js"></script> 
+    <script src="./libs/purple-passion.js"></script>
+    <script src="./js/age.js"></script>
+    <script src="./js/education.js"></script>
+</body>
+</html>

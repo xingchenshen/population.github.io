@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background:url("../date/background.png") no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 为内容区域添加滚动样式 */
+/* 主内容区域滚动 */
+.main-content {
+  height: calc(100vh - 7vh); /* 减去头部标题高度 */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+li {
+  list-style: none;
+}
+/* 声明字体*/
+@font-face {
+  font-family: electronicFont;
+  src: url("../font/DS-DIGIT.TTF");
+}
+.text1 {
+  position: relative;
+  height: 1.25rem;
+  height: 1.25rem;
+  background: url("../date/head_bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.text1 h1 {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+  color: rgb(223, 225, 232);
+  text-align: center;
+  line-height: 3rem;
+}
+.text1 .showTime {
+  font-family: "electronicFont";
+  position: absolute;
+  right: 7rem;
+  top: 2rem;
+  line-height: 0.5rem;
+  color:#0fff;
+  font-size: 1rem;
+}
+/* 第二行的flex布局 */
+.container1{
+  display:flex;
+  flex-direction: row;
+}
+#math1{
+  font-family:"electronicFont";
+  font-size: 3rem;
+  color: rgb(229, 245, 6);
+}
+#math2{
+  font-family: "electronicFont";
+  font-size: 3rem;
+  color: rgb(229, 245, 6);
+}
+#chinese1{
+  font-size: 1.5rem;
+  color: bisque;
+  font-family: 'Times New Roman', Times, serif;
+  left:5rem;
+}
+#chinese2{
+  font-size: 1.5rem;
+  color: bisque;
+  font-family: 'Times New Roman', Times, serif;
+}

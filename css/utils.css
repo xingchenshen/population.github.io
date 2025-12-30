@@ -1,0 +1,49 @@
+/**
+ * 背景色组件
+ */
+.bg-white {
+	background-color: #fff;
+}
+
+.bg-light {
+	background-color: #f8f9fa;
+}
+
+.bg-black {
+	background-color: #000;
+}
+
+.bg-dark {
+	background-color: #333;
+}
+
+.bg-muted {
+	background-color: #b0b0b0;
+}
+
+.bg-success {
+	background-color: #198754;
+}
+
+.bg-warn {
+	background-color: #ff6700;
+}
+.bg-danger {
+	background-color: #dc3545;
+}
+
+.bg-primary {
+	background-color: #0d6efd;
+}
+
+.bg-secondary {
+	background-color: #6c757d;
+}
+
+.bg-info {
+	background-color: #0dcaf0;
+}
+
+.bg-transparent {
+	background-color: transparent;
+}
